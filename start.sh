@@ -16,7 +16,7 @@ while true; do
             clear
             ;;
         3)
-            ansible -i inventory.ini hosts -m ping --ask-pass
+            ansible -i inventory hosts -m ping --ask-pass
 
             ;;
         0)
