@@ -1,0 +1,12 @@
+- name: گservice all host
+  hosts: myservers
+  gather_facts: no
+  tasks:
+    - name: گgive list host
+      service_facts:
+
+    - name: sort listsتب
+      debug:
+        msg: "{{ item.key }} --> {{ item.value.state }}"
+      loop: "{{ ansible_facts.services | dict2items | sort(attribute='key') }}"
+

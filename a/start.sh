@@ -17,11 +17,7 @@ while true; do
              ansible-playbook -i inventory.ini services.yml
             ;;
         3)
-<<<<<<< HEAD
-            ansible -i inventory hosts -m ping --ask-pass
-=======
             ansible -i inventory.ini myservers -m ping  
->>>>>>> update project
            ;;
         99)    
             clear
