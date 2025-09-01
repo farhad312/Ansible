@@ -5,6 +5,7 @@ while true; do
     echo "1 - Scan network "
     echo "2 - Clear"
     echo "3 - Ping"
+    echo "99 - clear "
     echo "0 - Exit"
     read -r choice
 
@@ -17,10 +18,16 @@ while true; do
             ;;
         3)
             ansible -i inventory hosts -m ping --ask-pass
-
            ;;
         99)    
             clear
             ;;
         0)
             echo "Exit"
+	    exit 0
+            ;;
+        *)
+            echo "Invalid"
+	    ;;
+    esac 
+done  
